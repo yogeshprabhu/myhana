@@ -22,7 +22,7 @@ RUN echo \
     </settings>" \
     > /root/.m2/settings.xml
 
-COPY /root/.m2 /root/.m2
+ADD /root/.m2 /root/.m2
 
 COPY pom.xml pipeline/
 
