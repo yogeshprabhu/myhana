@@ -1,1 +1,1 @@
-FROM jenkins:2.60.3 as myjenkins
+FROM jenkins/jenkins:2.124
