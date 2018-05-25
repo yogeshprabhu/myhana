@@ -40,6 +40,7 @@ node {
             pushToImage(CONTAINER_NAME, CONTAINER_TAG, USERNAME, PASSWORD)
         }
     }
+
    stage('NotifySlack'){
         notifySuccessful()
     }
@@ -78,5 +79,4 @@ def runApp(containerName, tag, dockerHubUser, httpPort){
 
 def notifySuccessful() {
   slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-    )
 }
